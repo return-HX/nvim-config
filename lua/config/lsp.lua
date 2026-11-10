@@ -21,6 +21,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
+local capabilities = require("blink.cmp").get_lsp_capabilities()
+
 local servers = {
   -- Go
   gopls = {
